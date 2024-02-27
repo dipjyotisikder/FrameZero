@@ -13,7 +13,7 @@ namespace FrameZero.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202402270814056_init"; }
+            get { return "202402271040080_Init"; }
         }
         
         string IMigrationMetadata.Source

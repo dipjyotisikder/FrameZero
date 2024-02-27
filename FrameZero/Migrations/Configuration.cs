@@ -1,15 +1,17 @@
 ﻿namespace FrameZero.Migrations
 {
     using System.Data.Entity.Migrations;
+    using System.Data.SQLite.EF6.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FrameZero.Data.FrameDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.FrameDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            SetSqlGenerator("System.Data.SQLite", new SQLiteMigrationSqlGenerator());
         }
 
-        protected override void Seed(FrameZero.Data.FrameDbContext context)
+        protected override void Seed(Data.FrameDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

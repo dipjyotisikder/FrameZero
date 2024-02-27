@@ -14,7 +14,6 @@
                     Name = c.String(nullable: false, maxLength: 20),
                 })
                 .PrimaryKey(t => t.Id);
-
         }
 
         public override void Down()

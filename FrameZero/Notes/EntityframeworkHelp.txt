@@ -1,0 +1,9 @@
+﻿  <connectionStrings>
+    //<add name="FrameDbContext" connectionString="Data Source=framedb.sqlite;" providerName="System.Data.SQLite" />
+    <add name="FrameDbContext" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=framedb;Integrated Security=True" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <entityFramework>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>

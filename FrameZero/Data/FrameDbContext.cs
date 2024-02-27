@@ -6,7 +6,7 @@ namespace FrameZero.Data
 {
     public class FrameDbContext : DbContext
     {
-        public FrameDbContext() { }
+        public FrameDbContext() : base() { }
 
         public DbSet<Frame> Frames { get; set; }
 
