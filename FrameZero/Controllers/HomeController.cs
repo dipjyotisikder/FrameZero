@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using FrameZero.Data;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace FrameZero.Controllers
 {
@@ -6,6 +8,12 @@ namespace FrameZero.Controllers
     {
         public ActionResult Index()
         {
+            using (var context = new FrameDbContext())
+            {
+                var list = context.Frames.ToList();
+                ViewBag.FrameNames = list.Select(x => x.Name).ToList();
+            }
+
             return View();
         }
 
